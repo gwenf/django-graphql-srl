@@ -30,7 +30,7 @@ class Mutation(graphene.ObjectType):
 class Query(graphene.ObjectType):
     users = graphene.List(UserType)
     decks = graphene.List(DeckType)
-    deck_by_id = graphene.List(DeckType, id=graphene.Int())
+    decks_by_id = graphene.Field(DeckType, id=graphene.Int())
     cards = graphene.List(CardType)
     deck_cards = graphene.List(CardType, deck=graphene.Int())
 
